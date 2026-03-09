@@ -1,4 +1,4 @@
-import { load } from "@tauri-apps/plugin-store";
+import { LazyStore } from "@tauri-apps/plugin-store";
 
 export interface ServerConfig {
     protocol: string;
@@ -13,7 +13,7 @@ export interface ServerListEntry {
     primary: boolean;
 }
 
-const store = await load('store.json', {
+const store = new LazyStore('store.json', {
     autoSave: true,
     defaults: {
         servers: [
