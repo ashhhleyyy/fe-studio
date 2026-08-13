@@ -1,5 +1,9 @@
 @import "bootstrap/scss/bootstrap";
 
+body:has(.presenterview) {
+  overflow: hidden;
+}
+
 .logo {
   max-width: 30%;
 }
