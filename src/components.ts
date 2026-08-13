@@ -4,6 +4,7 @@ import { useEffect, useState } from "preact/hooks";
 
 import offlineIcon from "./assets/offline.svg";
 import onlineIcon from "./assets/online.svg";
+import bapsLogo from "./assets/baps3.png";
 
 export function MainView(props: { serverSelected: (server: ServerListEntry) => void }) {
   const [entries, setEntries] = useState<ServerListEntry[]>([]);
@@ -43,7 +44,7 @@ export function MainView(props: { serverSelected: (server: ServerListEntry) => v
     <div class="container" style="max-width: 720px">
       <div class="mt-5">
         <div class="header text-center">
-          <img class="logo img-fluid mb-4" src="src/assets/baps3.png" />
+          <img class="logo img-fluid mb-4" src="${bapsLogo}" />
           <h1 class="h1 text-light">BAPS3 Presenter</h1>
         </div>
         <div id="app-container" class="card o-hidden border-0 shadow-lg my-3">
