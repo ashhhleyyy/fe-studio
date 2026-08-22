@@ -29,7 +29,7 @@
             gst_all_1.gst-plugins-ugly
 
             pkg-config
-        ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
+        ] ++ pkgs.lib.optionals pkgs.stdenv.hostPlatform.isDarwin [
           pkgs.libiconv
         ];
 
@@ -44,7 +44,6 @@
           packages = with pkgs; [
             nodejs
             yarn-berry
-            nodePackages.pnpm
             rust-analyzer
             mold
             gdb
